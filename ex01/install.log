@@ -1,0 +1,23 @@
+Collecting git+https://github.com/jaraco/path.git
+  Cloning https://github.com/jaraco/path.git to /private/var/folders/nb/0bkz5hv55zqbwb1zcrtwp9zr0000gn/T/pip-req-build-pz4it__t
+  Running command git clone --filter=blob:none --quiet https://github.com/jaraco/path.git /private/var/folders/nb/0bkz5hv55zqbwb1zcrtwp9zr0000gn/T/pip-req-build-pz4it__t
+  Resolved https://github.com/jaraco/path.git to commit 692a66e1f04cf5404cff6bc2b901bcbbd4e43ba1
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Building wheels for collected packages: path
+  Building wheel for path (pyproject.toml): started
+  Building wheel for path (pyproject.toml): finished with status 'done'
+  Created wheel for path: filename=path-17.0.1.dev26+g692a66e-py3-none-any.whl size=25051 sha256=5845cbb7e6433215d5a9af8cdaf9339b17ffde33e4c63eb2400dfba346d7fdab
+  Stored in directory: /private/var/folders/nb/0bkz5hv55zqbwb1zcrtwp9zr0000gn/T/pip-ephem-wheel-cache-5qktkwl3/wheels/05/97/77/84a6ccf4f5f41dfcbbeb29075fa06cf285990f754500f88e62
+Successfully built path
+Installing collected packages: path
+Successfully installed path-17.0.1.dev26+g692a66e
+WARNING: Target directory /Users/soniavarela/GitHub/Python-Django-1-Librairies/ex01/local_lib/path already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /Users/soniavarela/GitHub/Python-Django-1-Librairies/ex01/local_lib/path-17.0.1.dev26+g692a66e.dist-info already exists. Specify --upgrade to force replacement.
+
+[notice] A new release of pip is available: 24.0 -> 24.3.1
+[notice] To update, run: pip install --upgrade pip
