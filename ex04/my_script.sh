@@ -10,7 +10,7 @@ if ! command -v python3 &> /dev/null; then
     exit 1
 fi
 
-# Crear el entorno virtual
+# Crear el entorno virtuao
 echo "Creating virtual environment '$VENV_NAME'..."
 python3 -m venv $VENV_NAME || exit 1
 
