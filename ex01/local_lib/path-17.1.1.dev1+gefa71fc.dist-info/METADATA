@@ -1,6 +1,6 @@
-Metadata-Version: 2.1
+Metadata-Version: 2.2
 Name: path
-Version: 17.0.1.dev26+g692a66e
+Version: 17.1.1.dev1+gefa71fc
 Summary: A module wrapper for os.path
 Author-email: Jason Orendorff <jason.orendorff@gmail.com>
 Maintainer-email: "Jason R. Coombs" <jaraco@jaraco.com>

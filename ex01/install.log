@@ -1,7 +1,8 @@
+Looking in indexes: https://pypi.python.org/simple
 Collecting git+https://github.com/jaraco/path.git
-  Cloning https://github.com/jaraco/path.git to /private/var/folders/nb/0bkz5hv55zqbwb1zcrtwp9zr0000gn/T/pip-req-build-pz4it__t
-  Running command git clone --filter=blob:none --quiet https://github.com/jaraco/path.git /private/var/folders/nb/0bkz5hv55zqbwb1zcrtwp9zr0000gn/T/pip-req-build-pz4it__t
-  Resolved https://github.com/jaraco/path.git to commit 692a66e1f04cf5404cff6bc2b901bcbbd4e43ba1
+  Cloning https://github.com/jaraco/path.git to /tmp/pip-req-build-v44tse8s
+  Running command git clone --filter=blob:none --quiet https://github.com/jaraco/path.git /tmp/pip-req-build-v44tse8s
+  Resolved https://github.com/jaraco/path.git to commit efa71fcb34e5a9d34b34474326af67d082ad9b4a
   Installing build dependencies: started
   Installing build dependencies: finished with status 'done'
   Getting requirements to build wheel: started
@@ -11,13 +12,14 @@ Collecting git+https://github.com/jaraco/path.git
 Building wheels for collected packages: path
   Building wheel for path (pyproject.toml): started
   Building wheel for path (pyproject.toml): finished with status 'done'
-  Created wheel for path: filename=path-17.0.1.dev26+g692a66e-py3-none-any.whl size=25051 sha256=5845cbb7e6433215d5a9af8cdaf9339b17ffde33e4c63eb2400dfba346d7fdab
-  Stored in directory: /private/var/folders/nb/0bkz5hv55zqbwb1zcrtwp9zr0000gn/T/pip-ephem-wheel-cache-5qktkwl3/wheels/05/97/77/84a6ccf4f5f41dfcbbeb29075fa06cf285990f754500f88e62
+  Created wheel for path: filename=path-17.1.1.dev1+gefa71fc-py3-none-any.whl size=24007 sha256=54ac9ba6d877bf24bca5bc0d57a6bfbd1c8834785f4f4f0af8c4c9747bc92779
+  Stored in directory: /tmp/pip-ephem-wheel-cache-qd94edwf/wheels/05/97/77/84a6ccf4f5f41dfcbbeb29075fa06cf285990f754500f88e62
 Successfully built path
+WARNING: Error parsing dependencies of flatbuffers: Invalid version: '1.12.1-git20200711.33e2d80-dfsg1-0.6'
 Installing collected packages: path
-Successfully installed path-17.0.1.dev26+g692a66e
-WARNING: Target directory /Users/soniavarela/GitHub/Python-Django-1-Librairies/ex01/local_lib/path already exists. Specify --upgrade to force replacement.
-WARNING: Target directory /Users/soniavarela/GitHub/Python-Django-1-Librairies/ex01/local_lib/path-17.0.1.dev26+g692a66e.dist-info already exists. Specify --upgrade to force replacement.
+Successfully installed path-17.1.1.dev1+gefa71fc
+WARNING: Target directory /sgoinfre/students/svarela/GitHub/Django_01_Librairies/ex01/local_lib/path already exists. Specify --upgrade to force replacement.
+WARNING: Target directory /sgoinfre/students/svarela/GitHub/Django_01_Librairies/ex01/local_lib/path-17.1.1.dev1+gefa71fc.dist-info already exists. Specify --upgrade to force replacement.
 
-[notice] A new release of pip is available: 24.0 -> 24.3.1
-[notice] To update, run: pip install --upgrade pip
+[notice] A new release of pip is available: 24.2 -> 25.0
+[notice] To update, run: python3 -m pip install --upgrade pip
