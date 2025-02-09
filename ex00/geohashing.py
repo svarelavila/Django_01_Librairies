@@ -3,10 +3,6 @@ import antigravity
 
 
 def geohash():
-    """
-    calcula y abre una ubicación geohasheada en Google Maps usando `antigravity`.  
-    Argumentos: latitud, longitud y fecha.
-    """
     # Validar número de argumentos
     if len(sys.argv) != 4:
         print("Usage: python geohashing.py <latitude> <longitude> <date>")
