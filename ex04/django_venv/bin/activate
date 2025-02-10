@@ -45,7 +45,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV=/sgoinfre/students/svarela/GitHub/Django_01_Librairies/ex06/django_venv
+VIRTUAL_ENV=/sgoinfre/students/svarela/GitHub/Django_01_Librairies/ex04/django_venv
 if ([ "$OSTYPE" = "cygwin" ] || [ "$OSTYPE" = "msys" ]) && $(command -v cygpath &> /dev/null) ; then
     VIRTUAL_ENV=$(cygpath -u "$VIRTUAL_ENV")
 fi
