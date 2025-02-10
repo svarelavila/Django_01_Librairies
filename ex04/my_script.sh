@@ -1,42 +1,26 @@
 #!/bin/bash
 
-# Nombre del entorno virtual y archivo de dependencias
-VENV_NAME="django_venv"
-REQUIREMENTS_FILE="requirement.txt"
-
-# Verificar si Python 3 está instalado
-if ! command -v python3 &> /dev/null; then
-    echo "Error: Python3 no está instalado. Por favor, instálalo e inténtalo de nuevo."
-    exit 1
+# Verificar si virtualenv está instalado, si no, instalarlo en el directorio de usuario
+if ! python3 -m virtualenv --version &> /dev/null; then
+    echo "Virtualenv no está instalado. Instalándolo en el directorio de usuario..."
+    pip install --user virtualenv
+    export PATH=$PATH:~/.local/bin
 fi
 
-# Crear el entorno virtual con venv (incluido en Python 3)
-echo "Creando el entorno virtual '$VENV_NAME'..."
-python3 -m venv $VENV_NAME || exit 1
+# Crear el entorno virtual con virtualenv y nombrarlo "django_venv"
+python3 -m virtualenv django_venv
 
 # Verificar si el entorno virtual se creó correctamente
-if [ ! -d "$VENV_NAME" ]; then
-    echo "Error: No se pudo crear el entorno virtual '$VENV_NAME'."
+if [ ! -d "django_venv" ]; then
+    echo "The virtual environment was not created correctly"
     exit 1
 fi
 
 # Activar el entorno virtual
-echo "Activando el entorno virtual '$VENV_NAME'..."
-source $VENV_NAME/bin/activate || exit 1
+source django_venv/bin/activate
 
-# Verificar si requirement.txt existe antes de instalar dependencias
-if [ -f "$REQUIREMENTS_FILE" ]; then
-    echo "Instalando dependencias desde '$REQUIREMENTS_FILE'..."
-    pip install --upgrade pip
-    pip install -r $REQUIREMENTS_FILE || exit 1
-else
-    echo "Error: No se encontró el archivo '$REQUIREMENTS_FILE'."
-    deactivate
-    exit 1
-fi
+# Instalar las dependencias de requirement.txt
+pip install -r requirement.txt
 
-
-# Mensaje de confirmación
-echo "Configuración completada con éxito."
-echo "El entorno virtual '$VENV_NAME' está ahora activo."
-echo "Usa 'deactivate' para salir del entorno virtual."
+# Mantener el entorno virtual activado al salir del script
+exec "$SHELL"

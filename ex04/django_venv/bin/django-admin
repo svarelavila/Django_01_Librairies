@@ -1,4 +1,4 @@
-#!/Users/soniavarela/GitHub/Django_01_Librairies/ex04/django_venv/bin/python3
+#!/sgoinfre/students/svarela/GitHub/Django_01_Librairies/ex06/django_venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
