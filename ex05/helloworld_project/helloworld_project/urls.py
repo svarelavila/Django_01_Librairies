@@ -14,10 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from helloapp.views import hello_world  # Importamos la vista
+from django.urls import path, include
+from helloapp.views import home_redirect  # Importamos la vista de redirección
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('helloworld/', hello_world),  # Nueva ruta para mostrar "Hello world"
+    path('', home_redirect),  # Redirigir '/' a '/helloworld'
+    path('helloworld/', include('helloapp.urls')),  # Incluir las URLs de helloapp
 ]
