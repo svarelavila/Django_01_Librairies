@@ -39,6 +39,3 @@ else
     deactivate
     exit 1
 fi
-
-# Mantener el entorno virtual activado tras ejecutar el script
-exec "$SHELL"
