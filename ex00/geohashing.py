@@ -1,31 +1,39 @@
 import sys
-import antigravity
+import antigravity  # Este módulo es una broma y abre un navegador web de cómic.
 
 
-def geohash():
-    # Validar número de argumentos
+def geohashing():
+    """
+    Computes the geohash using latitude, longitude,
+    and a Dow opening value.
+    """
     if len(sys.argv) != 4:
-        print("Usage: python geohashing.py <latitude> <longitude> <date>")
-        sys.exit(1)  # Importante para que el script no continúe ejecutándose
+        print('Error: Exactly 3 arguments are required (latitude, longitude, datedow).')
+        sys.exit(1)
 
     try:
-        # Extraer y convertir argumentos
         latitude = float(sys.argv[1])
         longitude = float(sys.argv[2])
-        date = sys.argv[3].encode()  # Codificar la fecha como bytes para antigravity
-
-        # Calcular el geohash
-        antigravity.geohash(latitude, longitude, date)
-
-    except ValueError as e:
-        # Manejo de errores de conversión
-        print(f"Error: Invalid input format. {e}")
+        datedow = sys.argv[3]
+    except ValueError:
+        print('Usage: python3 geohashing.py 43.1496 -2.7207 2024-09-01-2041')
         sys.exit(1)
+
+    # Validar formato de datedown
+    if len(datedow.split('-')) != 4:
+        print('Error: datedow must be in the format YYYY-MM-DD-xxxx')
+        sys.exit(1)
+
+    # Codifique la cadena antes de pasarla a antigravity.geohash
+    encoded_datedow = datedow.encode('utf-8')
+
+    # Llamar a la función geohash desde antigravedad
+    try:
+        antigravity.geohash(latitude, longitude, encoded_datedow)
     except Exception as e:
-        # Manejo de cualquier otro error inesperado
-        print(f"An unexpected error occurred: {e}")
+        print(f'Error: {e}')
         sys.exit(1)
 
 
-if __name__ == "__main__":
-    geohash()
+if __name__ == '__main__':
+    geohashing()

@@ -20,5 +20,5 @@ from helloapp.views import home_redirect  # Importamos la vista de redirección
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', home_redirect),  # Redirigir '/' a '/helloworld'
-    path('helloworld/', include('helloapp.urls')),  # Incluir las URLs de helloapp
+    path('helloworld/', include('helloapp.urls'))
 ]
